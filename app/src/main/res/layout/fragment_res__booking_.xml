@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_back"
+    tools:context=".fragment.Res_Booking_Fragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <TextView
+            android:id="@+id/frag_res_book_tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/_8sdp"
+            android:gravity="start"
+            android:padding="@dimen/_5sdp"
+            android:text="Time and Date"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/line_below_time"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/frag_res_book_tv_name"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/frag_res_book_tv_choose_date"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@+id/frag_res_book_tv_name"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/_8sdp"
+            android:drawableStart="@drawable/ic_baseline_date_range_24"
+            android:drawablePadding="@dimen/_5sdp"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="Choose Date"
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/frag_res_book_recycler_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frag_res_book_tv_choose_date"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/custom_day" />
+
+        <TextView
+            android:id="@+id/frag_res_book_tv_choose_time"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@+id/frag_res_book_recycler_date"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/_8sdp"
+            android:drawableStart="@drawable/ic_baseline_access_time_24"
+            android:drawablePadding="@dimen/_5sdp"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="Choose Time"
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/frag_res_book_rg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_below="@+id/frag_res_book_tv_choose_time"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:padding="@dimen/_3sdp">
+
+            <RadioButton
+                android:id="@+id/frag_res_book_rb_morning"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Morning"
+                android:textSize="@dimen/_14ssp" />
+
+            <RadioButton
+                android:id="@+id/frag_res_book_rb_evening"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Evening"
+                android:textSize="@dimen/_14ssp" />
+
+            <RadioButton
+                android:id="@+id/frag_res_book_rb_all"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="24 H"
+                android:textSize="@dimen/_14ssp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/frag_res_book_linear"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_below="@+id/frag_res_book_rg"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:padding="@dimen/_3sdp">
+
+            <TextView
+                android:id="@+id/frag_res_book_tv_morning_price"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="750$"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/_16ssp" />
+
+            <TextView
+                android:id="@+id/frag_res_book_tv_evening_price"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="750$"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/_16ssp" />
+
+            <TextView
+                android:id="@+id/frag_res_book_tv_24hour"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="750$"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/_16ssp" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/frag_res_book_btn_go"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/frag_res_book_linear"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/_15sdp"
+            android:background="@drawable/btn_background"
+            android:text="Show Result"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</ScrollView>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/_15sdp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_170sdp"
+            >
+            <TextView
+                android:id="@+id/custom_review_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="Mustafa"
+                android:textSize="@dimen/_16sdp"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"
+                />
+            <android.widget.RatingBar
+                android:id="@+id/custom_review_rating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/custom_review_name"
+                android:layout_marginStart="@dimen/_12ssp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:progressTint="@color/primary" />
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/custom_review_rating"
+                android:layout_alignParentStart="true"
+
+                >
+                <TextView
+                    android:id="@+id/custom_review_tv_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/primary_text"
+                    android:text="asdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddas"
+                    />
+            </ScrollView>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

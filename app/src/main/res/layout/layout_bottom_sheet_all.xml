@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomSheetContainer_all"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_back"
+     >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <TextView
+            android:id="@+id/sheet_all_site__tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/_8sdp"
+            android:gravity="start"
+            android:padding="@dimen/_5sdp"
+            android:text="Site"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/line_below_site"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/sheet_all_site__tv_name"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/sheet_all_site__tv_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@+id/sheet_all_site__tv_name"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/_8sdp"
+            android:drawableStart="@drawable/ic_baseline_place_24"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="Choose Site According"
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold" />
+
+
+        <RadioGroup
+            android:id="@+id/sheet_all_site__rg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_below="@+id/sheet_all_site__tv_choose"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_3sdp">
+
+            <RadioButton
+                android:id="@+id/sheet_all_site__rb_area"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Area"
+                android:textSize="@dimen/_14ssp" />
+
+            <RadioButton
+                android:id="@+id/sheet_all_site__rb_location"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Location"
+                android:textSize="@dimen/_14ssp" />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:id="@+id/sheet_all_site__relative_inner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sheet_all_site__rg">
+
+            <TextView
+                android:id="@+id/sheet_all_site__tv_country"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_37sdp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/_27sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="Country"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/_14sdp"
+
+                />
+
+            <TextView
+                android:id="@+id/sheet_all_site__tv_select_country"
+                style="@style/btn_select_country"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_37sdp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/sheet_all_site__tv_country"
+                android:gravity="center"
+                android:text="select"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_16ssp" />
+
+            <TextView
+                android:id="@+id/sheet_all_site__tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_37sdp"
+                android:layout_below="@id/sheet_all_site__tv_country"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/_27sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="City"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/_14sdp"
+
+                />
+
+            <Spinner
+                android:id="@+id/sheet_all_site__sp_select_city"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_37sdp"
+                android:layout_below="@id/sheet_all_site__tv_select_country"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/sheet_all_site__tv_country"
+                tools:ignore="MissingClass" />
+
+        </RelativeLayout>
+
+
+        <!--       ************************** time-->
+
+        <TextView
+            android:id="@+id/sheet_all_time__tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sheet_all_site__relative_inner"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/_8sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="Time and Date"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_20ssp"
+            android:gravity="start"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/line_below_time"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/sheet_all_time__tv_name"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/sheet_all_time__tv_choose_date"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@+id/sheet_all_time__tv_name"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/_8sdp"
+            android:drawableStart="@drawable/ic_baseline_date_range_24"
+            android:drawablePadding="@dimen/_5sdp"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="Choose Date"
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/sheet_all_time__recycler_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sheet_all_time__tv_choose_date"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/custom_day" />
+
+        <TextView
+            android:id="@+id/sheet_all_time__tv_choose_time"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@+id/sheet_all_time__recycler_date"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/_8sdp"
+            android:drawableStart="@drawable/ic_baseline_access_time_24"
+            android:drawablePadding="@dimen/_5sdp"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="Choose Time"
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/sheet_all_time__rg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_below="@+id/sheet_all_time__tv_choose_time"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:padding="@dimen/_3sdp">
+
+            <RadioButton
+                android:id="@+id/sheet_all_time__rb_morning"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Morning"
+                android:textSize="@dimen/_14ssp" />
+
+            <RadioButton
+                android:id="@+id/sheet_all_time__rb_evening"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Evening"
+                android:textSize="@dimen/_14ssp" />
+
+            <RadioButton
+                android:id="@+id/sheet_all_time__rb_all"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="24 H"
+                android:textSize="@dimen/_14ssp" />
+        </RadioGroup>
+
+
+        <!--        ***************  Price-->
+        <TextView
+            android:id="@+id/sheet_all_price__tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sheet_all_time__rg"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/_8sdp"
+            android:gravity="start"
+            android:padding="@dimen/_5sdp"
+            android:text="Prices"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/line_below_price"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/sheet_all_price__tv_name"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/sheet_all_price__tv_input"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@+id/sheet_all_price__tv_name"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/_8sdp"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="Enter Price"
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/sheet_all_price__tv_start_price"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_37sdp"
+            android:layout_below="@id/sheet_all_price__tv_input"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_27sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="Start Price"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_14sdp" />
+
+        <EditText
+            android:id="@+id/sheet_all_price__et_start"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_37sdp"
+            android:layout_below="@id/sheet_all_price__tv_input"
+            android:layout_marginStart="@dimen/_11sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toEndOf="@id/sheet_all_price__tv_start_price"
+            android:padding="@dimen/_5sdp" />
+
+        <TextView
+            android:id="@+id/sheet_all_price__tv_end_price"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_37sdp"
+            android:layout_below="@id/sheet_all_price__tv_start_price"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_27sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="End Price"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_14sdp" />
+
+        <EditText
+            android:id="@+id/sheet_all_price__et_end"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_37sdp"
+            android:layout_below="@id/sheet_all_price__et_start"
+            android:layout_marginStart="@dimen/_11sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toEndOf="@id/sheet_all_price__tv_start_price"
+            android:padding="@dimen/_5sdp" />
+
+
+        <!--        ****************** Evaluation -->
+        <TextView
+            android:id="@+id/sheet_all_eva__tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sheet_all_price__et_end"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/_8sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="Evaluation"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/line_below_evaluation"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/sheet_all_eva__tv_name"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/sheet_all_eva__tv_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@+id/sheet_all_eva__tv_name"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/_8sdp"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="Choose Evaluation"
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold" />
+
+        <android.widget.RatingBar
+            android:id="@+id/sheet_all_eva__rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sheet_all_eva__tv_choose"
+            android:layout_marginStart="@dimen/_16ssp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressTint="@color/primary" />
+
+        <Button
+            android:id="@+id/sheet_all_btn_go"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sheet_all_eva__rating"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/_15sdp"
+            android:background="@drawable/btn_background"
+            android:text="Show Result"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

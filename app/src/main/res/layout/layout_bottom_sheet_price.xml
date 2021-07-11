@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomSheetContainer_price"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet_back"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/sheet_price_tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/_8sdp"
+        android:gravity="start"
+        android:padding="@dimen/_5sdp"
+        android:text="Prices"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/line_below_price"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/sheet_price_tv_name"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/sheet_price_tv_input"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/sheet_price_tv_name"
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/_8sdp"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="Enter Price"
+        android:textSize="@dimen/_17ssp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/sheet_price_tv_start_price"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_37sdp"
+        android:layout_below="@id/sheet_price_tv_input"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/_27sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="Start Price"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_14sdp" />
+
+    <EditText
+        android:id="@+id/sheet_price_et_start"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_37sdp"
+        android:layout_toEndOf="@id/sheet_price_tv_start_price"
+        android:layout_below="@id/sheet_price_tv_input"
+        android:layout_marginStart="@dimen/_11sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:padding="@dimen/_5sdp"
+        />
+
+    <TextView
+        android:id="@+id/sheet_price_tv_end_price"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_37sdp"
+        android:layout_below="@id/sheet_price_tv_start_price"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/_27sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="End Price"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_14sdp" />
+
+    <EditText
+        android:id="@+id/sheet_price_et_end"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_37sdp"
+        android:layout_toEndOf="@id/sheet_price_tv_start_price"
+        android:layout_below="@id/sheet_price_et_start"
+        android:layout_marginStart="@dimen/_11sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:padding="@dimen/_5sdp"
+        />
+
+    <Button
+        android:id="@+id/sheet_price_btn_go"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sheet_price_tv_end_price"
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/_15sdp"
+        android:background="@drawable/btn_background"
+        android:text="Show Result"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_17ssp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

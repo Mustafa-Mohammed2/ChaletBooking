@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.Res_Info_Fragment">
+
+
+    <TextView
+        android:id="@+id/fragment_info_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="Chalet Mustafa"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/fragment_info_site"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_info_name"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:drawableStart="@drawable/ic_baseline_place_24"
+        android:text="Site"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_13ssp"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/fragment_info_tv_morning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_info_site"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/_19sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Morning"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_13ssp" />
+
+    <TextView
+        android:id="@+id/fragment_info_tv_evening"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_info_tv_morning"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/_19sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Evening"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_13ssp" />
+
+
+    <android.widget.RatingBar
+        android:id="@+id/fragment_info_rating"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_info_site"
+        android:layout_alignEnd="@id/fragment_info_rate_num"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_19sdp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:progressTint="#2196F3"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/fragment_info_rate_num"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_info_site"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:gravity="center"
+        android:text="4.5"
+        android:textSize="@dimen/_10ssp"
+        android:visibility="gone"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_info_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_info_tv_evening"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/fragment_info_tv_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_info_recycler"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/_19sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="start"
+        android:text="About Chalet"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/fragment_info_tv_about_chalet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_info_tv_about"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/_19sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:gravity="start"
+        android:text="aboutaboutaboutaboutaboutaboutaboutaboutabout"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_13ssp" />
+
+    <Button
+        android:id="@+id/fragment_info_btn_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_12sdp"
+        android:text="Book Now"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

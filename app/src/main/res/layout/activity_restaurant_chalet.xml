@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.Restaurant_Chalet">
+
+
+
+
+    <ImageView
+        android:id="@+id/rest_chalet_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180sdp"
+
+        />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/rest_chalet_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#03A9F4"
+        app:tabGravity="center"
+        app:tabMode="scrollable" />
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/rest_chalet_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAllCaps="false" />
+
+
+</LinearLayout><!--  <com.google.android.gms.maps.MapView
+            android:id="@+id/frag_map_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+             />-->
+
+

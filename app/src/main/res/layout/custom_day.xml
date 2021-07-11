@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/custom_day_cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:backgroundTint="@color/icons"
+        app:cardCornerRadius="@dimen/_15sdp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="@dimen/_63sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_3sdp"
+            android:background="#26BDBDBD"
+
+            >
+
+            <TextView
+                android:id="@+id/customDay_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:text="Oct"
+                android:gravity="center"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/primary_text"
+                />
+
+            <TextView
+                android:id="@+id/customDay_number_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/customDay_month"
+                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:text="15"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/primary_text"
+
+
+                />
+
+            <TextView
+                android:id="@+id/customDay_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/customDay_number_day"
+                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:text="Sun"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/primary_text"
+                />
+
+            <TextView
+                android:id="@+id/customDay_morning"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/circle_morning"
+                android:layout_below="@+id/customDay_day"
+                android:text="Morning"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="@color/primary_text"
+                android:layout_alignParentStart="true"
+                android:visibility="invisible"
+                />
+            <TextView
+                android:id="@+id/customDay_evening"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/circle_evening"
+                android:layout_below="@+id/customDay_morning"
+                android:text="Evening"
+                android:visibility="invisible"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

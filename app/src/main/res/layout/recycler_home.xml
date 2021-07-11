@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/recycler_home_relative"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/recycler_home_image"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/chalet"
+            app:shapeAppearanceOverlay="@style/roundimageview" />
+
+        <TextView
+            android:id="@+id/recycler_home_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toEndOf="@id/recycler_home_image"
+            android:text="Chalet Mustafa"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/recycler_home_site"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recycler_home_name"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_toEndOf="@id/recycler_home_image"
+            android:drawableStart="@drawable/ic_baseline_place_24"
+            android:text="Site"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_13ssp" />
+
+        <TextView
+            android:id="@+id/recycler_home_price_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recycler_home_site"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_toEndOf="@id/recycler_home_image"
+            android:drawablePadding="@dimen/_3sdp"
+            android:text="1500$ / Morning"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_13ssp" />
+
+        <android.widget.RatingBar
+            android:id="@+id/recycler_home_rating"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recycler_home_site"
+            android:layout_marginStart="@dimen/_3ssp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_toEndOf="@+id/recycler_home_price_time"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressTint="@color/primary" />
+
+        <TextView
+            android:id="@+id/recycler_home_rate_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recycler_home_site"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_toEndOf="@+id/recycler_home_rating"
+            android:text="4.5"
+            android:textSize="@dimen/_10ssp" />
+    </RelativeLayout>
+
+</RelativeLayout>

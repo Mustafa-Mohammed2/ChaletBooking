@@ -1,0 +1,45 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Chalets_booking" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/accent</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/primary_light</item>
+        <item name="colorSecondaryVariant">@color/secondary_text</item>
+        <item name="colorOnSecondary">@color/divider</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <!--        <item name="android:background">@drawable/bottom_sheet_back</item>-->
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="button" parent="">
+
+        <item name="android:backgroundTint">#00FFFFFF</item>
+    </style>
+
+    <style name="btn_select_country" parent="">
+
+        <item name="android:backgroundTint">#00FFFFFF</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="roundimageview" parent="">
+
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+        <item name="color">@color/icons</item>
+    </style>
+</resources>

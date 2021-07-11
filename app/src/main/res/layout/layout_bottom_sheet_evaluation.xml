@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomSheetContainer_evaluation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet_back"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/sheet_evaluation_tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/_8sdp"
+        android:padding="@dimen/_5sdp"
+        android:text="Evaluation"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_20ssp"
+        android:gravity="start"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/line_below_evaluation"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/sheet_evaluation_tv_name"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/sheet_evaluation_tv_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/sheet_evaluation_tv_name"
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/_8sdp"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="Choose Evaluation"
+        android:textSize="@dimen/_17ssp"
+        android:textStyle="bold" />
+
+
+    <android.widget.RatingBar
+        android:id="@+id/sheet_evaluation_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sheet_evaluation_tv_choose"
+        android:layout_marginStart="@dimen/_16ssp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:progressTint="@color/primary" />
+
+    <Button
+        android:id="@+id/sheet_evaluation_btn_go"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sheet_evaluation_rating"
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/_15sdp"
+        android:background="@drawable/btn_background"
+        android:text="Show Result"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_17ssp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

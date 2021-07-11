@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "147088066118",
+    "project_id": "chaletsbooking-f4568",
+    "storage_bucket": "chaletsbooking-f4568.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147088066118:android:2e5a516c75f48438b2ec47",
+        "android_client_info": {
+          "package_name": "com.project.chaletbooking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147088066118-pj180g7qh2ram3seccqv0k246v051egg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.chaletbooking",
+            "certificate_hash": "fb5b04b1740c8ebcbacc5f19241ff49194331156"
+          }
+        },
+        {
+          "client_id": "147088066118-ilut48moqmp31n4epf9rkebn5cssh23b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPgyFaHOdnjVKYsKyjd512KQB7gLcE564"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147088066118-ilut48moqmp31n4epf9rkebn5cssh23b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
